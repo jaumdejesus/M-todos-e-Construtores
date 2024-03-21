@@ -1,0 +1,61 @@
+using Microsoft.VisualBasic;
+using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.Intrinsics.X86;
+
+class Principal
+{
+
+    static void Main()
+    {
+        /*Carro chevrolet = new Carro();
+        chevrolet.Modelo = "Sedan";
+        chevrolet.Montadora = "Chevrolet";
+        chevrolet.Nome = "Onix";
+        chevrolet.Ano = 2018;
+        chevrolet.Potencia = 110;
+        Console.WriteLine(chevrolet.Modelo + " " + chevrolet.Montadora + " " + chevrolet.Nome + " " + chevrolet.Ano + " " + chevrolet.Potencia);
+        chevrolet.Acelerar(chevrolet.Nome);
+
+        Console.WriteLine(" ");
+
+        Carro ford = new Carro();
+        ford.Modelo = "SUV";
+        ford.Montadora = "Ford";
+        ford.Nome = "EcoSport";
+        ford.Ano = 2018;
+        ford.Potencia = 120;
+        Console.WriteLine(ford.Modelo + " " + ford.Montadora + " " + ford.Nome + " " + ford.Ano + " " + ford.Potencia);
+        ford.Acelerar(ford.Nome);*/
+
+        Carro carro1 = new Carro("Sedan", "Chevrolet", "Onix", 2018, 110);
+        carro1.Acelerar(carro1);
+
+        Carro carro2 = new Carro("SUV", "Ford", "EcoSport", 2018, 120);
+        carro2.Acelerar(carro2);
+    }
+}
+
+public class Carro
+{
+    public string? Modelo;
+    public string? Montadora;
+    public string? Nome;
+    public int Ano;
+    public int Potencia;
+
+    public void Acelerar(Carro nome)
+    {        
+        Console.WriteLine($"Acelerando o meu {this.Nome}");
+    }
+
+    public Carro(string modelo, string montadora, string nome, int ano, int potencia) 
+    {
+        this.Modelo = modelo;              
+        this.Montadora = montadora;
+        this.Nome = nome;
+        this.Ano = ano;
+        this.Potencia = potencia;
+    }
+}
+
